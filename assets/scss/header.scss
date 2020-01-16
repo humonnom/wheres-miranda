@@ -1,0 +1,23 @@
+header.header {
+  display: flex;
+  align-items: center;
+  background-color: $blueBlack;
+  .header__wrapper {
+    width: 800px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    .header__column {
+      padding: 15px;
+      a {
+        color: $bg-color;
+        font-size: 20px;
+      }
+      &:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.wrapper {
+  min-height: 100vh;
+  max-height: 200vh;
+  .musics__wrapper {
+    .music {
+      margin-bottom: 10px;
+      .music__text {
+        text-transform: uppercase;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      iframe {
+        width: 560px;
+        height: 315px;
+        display: none;
+      }
+    }
+  }
+}
