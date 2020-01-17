@@ -1,19 +1,32 @@
-.wrapper {
-  min-height: 100vh;
-  max-height: 200vh;
-  .musics__wrapper {
-    .music {
+.music-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 30px;
+  .title {
+    margin: 30px 0px;
+  }
+  .musics-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    text-transform: uppercase;
+    .music-text {
       margin-bottom: 10px;
-      .music__text {
-        text-transform: uppercase;
-        &:hover {
-          cursor: pointer;
+      font-size: 14px;
+      .music-video {
+        iframe {
+          margin-top: 5px;
+          box-shadow: $boxShadow;
+          border-radius: 10px;
+          display: block;
+          width: 375px;
+          height: 210px;
+          &:hover {
+            cursor: pointer;
+          }
         }
-      }
-      iframe {
-        width: 560px;
-        height: 315px;
-        display: none;
       }
     }
   }
