@@ -1,16 +1,11 @@
 extends layouts/main
 
 block content
-    .wrapper 
-        .title Best Scene
-        .slides__wrapper
-            .slide
-            .slide
-            .slide
-            .slide
-            .slide
-            .slide
-            .slide
-            .slide
-            .slide
-            .slide
+    .wrapper#bestLoad
+        a.title(href=routes.bestscene) Best Scene
+        .choice-wrapper#jsChoiceWrapper
+            .choice__btns
+                span.gif-btn Gif
+                span.image-btn Image
+        .scene-wrapper.hide#jsSceneWrapper
+        .gif-wrapper.hide#jsGifWrapper

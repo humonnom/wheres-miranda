@@ -1,15 +1,17 @@
 extends layouts/main
 
 block content
-    .wrapper#jsGame 
-        .title Game
-        .game__board
-            span 1
-            span 2
-            span 3
-            span 4
-            span 5
-            span 6
-            span 7
-            span 8
-            span 9
+    .wrapper#gameLoad
+        a.title(href= routes.game) Game
+        .game-board
+            .cards-wrapper#jsGame 
+        .notice-board.hide#jsNotice
+            .notice-wrapper
+                .notice-btns 
+                    .xbtn ✕
+                .notice-title Notice
+                .notice-column#jsNoticeC
+                    .notice-msg#jsSuccess.hide 
+                        .msg 🏳️‍🌈 Clear! 🏳️‍🌈
+                    .time-count#jsTimeCount
+                    a.gamestartbtn#jsNewGame(href= routes.game) One more? 🕹

@@ -1,8 +1,104 @@
 .wrapper {
-  height: 90vh;
-  .slides__wrapper {
-    width: 85vw;
-    height: 65vh;
-    background-color: red;
+  .choice-wrapper {
+    width: 100%;
+    height: 100%;
+    .choice__btns {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+      span {
+        background-color: $blueBlack;
+        cursor: pointer;
+        color: white;
+        font-size: 30px;
+        display: inline-block;
+        margin: 50px;
+        border-radius: 10px;
+        box-shadow: boxShadowtwo;
+        background-size: cover;
+        vertical-align: top;
+        background-position: center center;
+        display: inline-block;
+        &:first-child {
+          padding: 100px 160px;
+          background-image: url("https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2FdodsqX%2FbtqBsH6Cz6j%2FUlkvXSY6EAAlO2ToJGvNR1%2Fimg.gif");
+        }
+        &:last-child {
+          padding: 100px 140px;
+          background-image: url("https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2Fb1fD5R%2FbtqBuPBHeF3%2FGhsAQIMPjVNGsmfgHT8drK%2Fimg.png");
+        }
+      }
+    }
   }
+  .gif-wrapper,
+  .scene-wrapper {
+    &.hide {
+      display: none;
+    }
+    &.show {
+      padding: 20px;
+      padding-bottom: 0;
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-rows: 3fr 1fr;
+      border-radius: 10px;
+    }
+    .scene-box {
+      padding: 20px;
+      padding-left: 0px;
+      grid-area: 2/ 1 / 3 / 2;
+      overflow: scroll;
+      display: grid;
+      grid-gap: 15px;
+      grid-template-rows: 1fr;
+      grid-auto-columns: 150px;
+      grid-auto-flow: column;
+      overflow: scroll;
+      .best-scene,
+      .best-gifs {
+        box-shadow: boxShadowtwo;
+        border-radius: 5px;
+        background-size: cover;
+        vertical-align: top;
+        background-position: center center;
+      }
+    }
+    .view-board {
+      grid-area: 1/ 1 / 2 / 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      .veiw-ver {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        vertical-align: top;
+        background-position: center center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: boxShadowtwo;
+      }
+    }
+  }
+}
+.hide {
+  display: none;
+}
+
+.switch-btn {
+  display: block;
+  position: absolute;
+  padding: 10px 20px;
+  background-color: white;
+  box-shadow: $boxShadow;
+  border: none;
+  border-radius: 20px;
+  top: 10%;
+  left: 5%;
 }

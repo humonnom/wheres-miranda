@@ -2,4 +2,11 @@ $bg-color: #f5f6fa;
 $blueBlack: #303952;
 $black: #2d3436;
 $white: #ffffff;
+$dark-blue: rgb(60, 64, 67);
+$gray: #57606f;
+$yellow: #f1c40f;
+$borderWhite: solid 2px white;
+$borderGrayThin: solid 0.4px $gray;
 $boxShadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+$boxShadowtwo: 0 1px 3px 0 rgba($dark-blue, 0.3),
+  0 4px 8px 3px rgba($dark-blue, 0.15);
