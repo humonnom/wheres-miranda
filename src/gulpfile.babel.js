@@ -11,17 +11,17 @@ sass.compiler = require("node-sass");
 const paths = {
   styles: {
     src: "assets/scss/styles.scss",
-    dest: "src/static/styles",
+    dest: "static/styles",
     watch: "assets/scss/**/*.scss"
   },
   js: {
     src: "assets/js/main.js",
-    dest: "src/static/js",
+    dest: "static/js",
     watch: "assets/js/**/*.js"
   }
 };
 
-const clean = () => del(["src/static"]);
+const clean = () => del(["static"]);
 
 const styles = () =>
   gulp
@@ -50,12 +50,7 @@ const js = () =>
     )
     .pipe(gulp.dest(paths.js.dest));
 
-const watchFiles = () => {
-  gulp.watch(paths.styles.watch, styles);
-  gulp.watch(paths.js.watch, js);
-};
-
-const dev = gulp.series(clean, styles, js, watchFiles);
+const dev = gulp.series(clean, styles, js);
 
 export const build = gulp.series(clean, styles, js);
 

@@ -5,8 +5,15 @@
   "author": "homonnom <josojoso0702@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev:server": "nodemon --exec babel-node src/server.js --ignore assets/ --ignore src/static",
-    "dev:assets": "gulp"
+    "dev:server": "nodemon --exec babel-node src/server.js --delay 2 --ignore '.scss' --ignore 'static' ",
+    "dev:assets": "cd src && gulp",
+    "build:assets": "cd src && gulp",
+    "build:server": "babel src --out-dir build --ignore 'src/assets', 'src/gulpfile.babel.js'",
+    "copyAll": "cp -R src/static build && cp -R src/views build",
+    "build": "npm run build:server && npm run build:assets && npm run copyAll",
+    "prebuild": "rm -rf build",
+    "start": "node build/server.js",
+    "prestart": "npm run build"
   },
   "dependencies": {
     "@babel/cli": "^7.8.3",

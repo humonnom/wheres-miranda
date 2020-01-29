@@ -1,0 +1,28 @@
+.roading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background-color: $blueBlack;
+  color: white;
+  span:first-child {
+    margin-bottom: 15px;
+  }
+}
+
+@media (min-device-width: 501px) and (max-device-width: 5120px) {
+  .roading {
+    font-size: 30px;
+  }
+}
+@media (max-device-width: 500px) {
+  .roading {
+    font-size: 20px;
+  }
+}

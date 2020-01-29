@@ -1,0 +1,96 @@
+.wrapper {
+  .game-board {
+    background-color: $yellow;
+    display: table;
+    border-radius: 10px;
+    .cards-wrapper {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      width: 100%;
+      height: 100%;
+      .cards {
+        display: inline-block;
+        &.flipped {
+          pointer-events: none;
+          cursor: default;
+          .cards__inner {
+            transform: rotateY(180deg);
+          }
+        }
+        .cards__inner {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          transition: transform 0.8s;
+          transform-style: preserve-3d;
+          cursor: pointer;
+          .card-front,
+          .card-back {
+            border-radius: 10px;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            box-shadow: $boxShadow;
+          }
+          .card-front {
+            background-color: #ecf0f1;
+            color: $gray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          .card-back {
+            transform: rotateY(180deg);
+            background-size: cover;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-device-width: 501px) and (max-device-width: 5120px) {
+  .wrapper {
+    height: 90vh;
+    .game-board {
+      width: 600px;
+      height: 650px;
+      .cards-wrapper {
+        .cards {
+          width: 100px;
+          height: 150px;
+          margin: 15px;
+          .cards__inner {
+            .card-front {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-device-width: 500px) {
+  .wrapper {
+    height: 90vh;
+    .game-board {
+      width: 320px;
+      height: 500px;
+      .cards-wrapper {
+        .cards {
+          width: 80px;
+          height: 100px;
+          margin: 7px;
+          .cards__inner {
+            .card-front {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
