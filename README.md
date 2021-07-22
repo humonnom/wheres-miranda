@@ -19,10 +19,10 @@ Where's Miranda?
   - [x] babelify(browerify 변환도구)   
   - [x] eslint   
 
-- [] 폴더구성
-  - [] MVC   
-    - [x]routes,   
-    - [] router,   
-    - [] controller,   
-  - [] middleware   
+- [ ] 폴더구성
+  - [ ] MVC   
+    - [x] routes,   
+    - [ ] router,   
+    - [ ] controller,   
+  - [ ] middleware   
   - [x] pug(layouts, partial...)   
